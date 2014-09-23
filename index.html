@@ -2,16 +2,68 @@
 	<head>
 		<title>AngularJS</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		<script type="text/javascript" charset="utf-8" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+
 	</head>
 	<body>
-		<div ng-app>
-			<p>
-				Nombre: <input type="text" name="texto" value="" ng-model="nombre">
-			</p>
-			<h1>Hola {{nombre}}</h1>
-		</div>
 
+		<div ng-app="" ng-controller="personaController">
+			Nombre: <input type="text" ng-model="persona.nombre"> <br />
+			Apellido: <input type="text" ng-model="persona.apellido"> <br />
+
+			<h1>Nombre completo: {{ persona.nombre + " " + persona.apellido | uppercase }}</h1>
+		</div>
+		<!--<div ng-app="" ng-init="nombres=[{nombre:'Cristian', pais:'Colombia'},{nombre:'Antonia',pais:'Argentina'}]">
+			<ul>
+				<li ng-repeat="x in nombres">
+					{{ x.nombre + ", "+ x.pais}}
+				</li>
+			</ul>
+		</div> -->
+		<!--<div ng-app="" ng-init="nombres=['Antonia','Camila','Fabián']">
+			<ul>
+				<li ng-repeat="x in nombres">
+					{{ x }}
+				</li>
+			</ul>
+		</div> -->
+
+		<!--<div ng-app="" ng-init="points=[12,3,4,5,6]">
+			<p>
+				El nombre es {{ points[2] }}
+			</p>
+		</div> -->
+		<!--<div ng-app="" ng-controller="personaController">
+			Primer nombre: <input type="text" ng-model="primerNombre"> <br />
+			Primer nombre: <input type="text" ng-model="segundoNombre"> <br />
+
+			Nombre completo: {{primerNombre + " " + segundoNombre }}
+		</div> -->
+		<!--<div ng-app="">
+			<p>
+				Una expresion: {{ 5 + 5}}
+			</p>
+		</div> -->
+		<!--<div data-ng-app="" data-ng-init="firstName='Cristian'">
+			<p>
+				El nombre es <span data-ng-bind="firstName"></span>
+			</p>
+		</div> -->
+
+		<!--<div ng-app="">
+			<p>Name: <input type="text" ng-model="name"></p>
+			<p ng-bind="name"></p>
+		</div> -->
+		<script type="text/javascript" charset="utf-8" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+
+			// function personaController($scope){
+			// 	$scope.primerNombre = "Cristian";
+			// 	$scope.segundoNombre = "Angulo";
+			// }
+
+		</script>
+
+		<script type="text/javascript" charset="utf-8" src="js/appController.js"></script>
 	</body>
 </html>
